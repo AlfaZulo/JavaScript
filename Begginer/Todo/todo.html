@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    <button>Press me</button>
-    <div>Buy Food</div>
-    <div>Go to the gym</div>
-    <div>Study</div>
+    
 </body>
 
 <script>
@@ -20,9 +17,18 @@
  let todo2 = 'Go to the gym';
  let todo3 = 'Study';
 
- let element = document.createElement('div');
- element.innerText = todo1;
- document.body.appendChild(element);
+ 
 
+ function addTodo(todoTitle){
+     let element = document.createElement('div');
+     element.innerText = todoTitle;
+     document.body.appendChild(element);
+ }
+
+ addTodo(todo1);
+ addTodo(todo2);
+ 
+
+ 
 </script>
 </html>
