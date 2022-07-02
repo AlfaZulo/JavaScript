@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    
+    <input id="todo-title" type="text">
+    <button onclick="addTodo()">Add Todo</button>
 </body>
  
 <script>
@@ -23,19 +24,12 @@
      document.body.appendChild(element);
 
  });
-
-
- 
-
- function addTodo(todoTitle){
-     let element = document.createElement('div');
-     element.innerText = todoTitle;
-     document.body.appendChild(element);
- }
-
- addTodo(todo1);
- addTodo(todo2);
- 
+  
+    function addTodo(){
+        let textbox = document.getElementById('todo-title');
+        let title = textbox.value;
+        todos.push(title);
+    };
 
  
 </script>

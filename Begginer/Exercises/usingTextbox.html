@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox use</title>
+</head>
+<body>
+    <!-- Exercise 1
+
+Set up a <button id="todo-button">To Do</button> so that when you click the button, the text inside changes to "Done" (hint: use .innerText) -->
+<!-- <button id="todo-button" onclick="changeToDone()">To do</button>
+<script>
+  function changeToDone() {
+    let button = document.getElementById('todo-button');
+    button.innerText = 'Done';
+  }
+</script> -->
+
+<!-- Exercise 2
+Set up a <div id="counter">0</div>, a button with the label "Up", and a variable: let count = 0; so that when clicking the button, the number in the div increases by 1. (hint: use count = count + 1;)
+<div id="counter">0</div>
+<button onclick="countUp()">Up</button>
+<script>
+    let count = 0;
+
+
+   
+  function countUp() {
+    count = count + 1;
+    let counter = document.getElementById('counter');
+    counter.innerText = count;
+  }
+</script> -->
+<!-- 
+Exercise 3
+Set up the same counter as above, but with another button "Down", that decreases the count by one. (hint: use count = count - 1;)
+
+ -->
+
+ <div id="counter">0</div>
+ <button onclick="countUp()">UP</button>
+ <button onclick="countDown()">DOWN</button>
+
+ <script>
+
+    let count = 0;
+
+    function countUp(){
+        count = count +1;
+        updateCount()
+        };
+
+        function countDown(){
+        count = count -1;
+        updateCount()
+        };
+
+        function updateCount(){
+            let counter = document.getElementById('counter');
+            counter.innerText= count;
+        }
+
+
+
+
+
+ </script>
+
+
+
+
+
+
+</html>
