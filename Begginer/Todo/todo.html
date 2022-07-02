@@ -11,11 +11,19 @@
 <body>
     
 </body>
-
+ 
 <script>
- let todo1 = 'Buy food';
- let todo2 = 'Go to the gym';
- let todo3 = 'Study';
+ let todos = ['sleep', 'eat', 'dance', 'repeat']
+
+ todos.push('another todo');
+ 
+ todos.forEach(function(todoTitle){
+    let element = document.createElement('div');
+     element.innerText = todoTitle;
+     document.body.appendChild(element);
+
+ });
+
 
  
 

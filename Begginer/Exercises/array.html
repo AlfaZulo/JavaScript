@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+//Exercise 1
+// Write a function toUpper that takes 1 parameter, an array of strings, and console.logs a new array with all the strings capitalized.
+
+// (Hint: create a new array and push onto the array. Use google to learn the code for converting a string to uppercase in Javascript.
+
+// Example: toUpper(['hello', 'world']); will console.log(['HELLO', 'WORLD'])
+    
+// function toUpper (stringArr) {  
+//     let result = [];
+
+//     stringArr.forEach(function(str){
+//         result.push(str.toUpperCase());
+//     });
+//     console.log(result);
+// }
+// toUpper(['hello', 'world']);
+
+
+
+// //========================
+// Exercise 2
+// Write a function arrayDouble that takes an array and console.logs a new array with every value repeated twice.
+
+// Example: arrayDouble(['bark', 'meow']); will console.log(['bark', 'bark', 'meow', 'meow'])
+
+// function arrDouble(stringArr){
+//     let result = [];
+
+//     stringArr.forEach(function(str){
+//         result.push(str);
+//         result.push(str);
+//     });
+
+//     console.log(result);
+// }
+// arrDouble(['one', 'two']);
+
+// Exercise 3
+// Write a function arraySum that takes an array of numbers and console.logs the sum of the numbers. (Hint: create a variable and increase its value like this):
+
+function arraySum(numArr){
+    let total = 0;
+
+    numArr.forEach(function(num){
+        total= total+num
+    });
+    console.log(total);
+    }
+    arraySum([1,2,3,4]);
+    arraySum([4,3,2,2]);
+
+
+
+
+
+
+</script>
+</html>
