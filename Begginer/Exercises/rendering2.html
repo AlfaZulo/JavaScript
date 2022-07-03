@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendering</title>
+</head>
+<body>
+    <input id="mesurment">
+    <button onclick="convertToCm()">Convert to cm</button>
+    <button onclick="convertToInch()">Convert to inch</button>
+</body>
+
+<script>
+    const mesurment = document.getElementById('mesurment');
+
+    function convertToCm(){
+        const value = mesurment.value;
+        const convertValue = +value*2.54;
+
+        const result = document.createElement('div');
+        result.innerText = convertValue;
+        document.body.appendChild(result);
+
+    }
+
+    function convertToInch(){
+        const value = mesurment.value;
+        const convertValue = +value/2.54;
+
+        const result = document.createElement('div');
+        result.innerText = convertValue;
+        document.body.appendChild(result);
+    }
+
+
+</script>
+</html>
