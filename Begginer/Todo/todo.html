@@ -19,15 +19,18 @@
 <script>
  const todos = [{
     title: 'Eat',
-    dueDate: '2022-03-01'
+    dueDate: '2022-03-01',
+    id:'id1'
  },
  {
     title: 'Sleep',
-    dueDate: '2022-04-02'
+    dueDate: '2022-04-02',
+    id:'id2'
 
  },{
     title: 'Rave',
-    dueDate: '2022-05-03'
+    dueDate: '2022-05-03',
+    id:'id3'
 
  }]
 
@@ -39,12 +42,19 @@
 
         const datePicker = document.getElementById('date-picker');
         const dueDate = datePicker.value;
+
+        const id = new Date().getTime();
         todos.push({title:title,
-                    dueDate:dueDate
+                    dueDate:dueDate,
+                    id: id
                     });
 
         render();
 
+    };
+
+    function deleteTodo(event){
+        console.log(event)
     };
     
     function render(){ 
@@ -54,6 +64,14 @@
         todos.forEach(function(todo){
         const element = document.createElement('div');
         element.innerText = todo.title + ' '+ todo.dueDate;
+
+        const deleteButton = document.createElement('button')
+        deleteButton.style = 'margin-left:12px';
+        deleteButton.onclick = deleteTodo;
+        deleteButton.innerText = 'Delete';
+        deleteButton.id = todo.id;
+        element.appendChild(deleteButton);
+
         const todoList =document.getElementById('todo-list');
         todoList.appendChild(element);
 
