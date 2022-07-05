@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReturnValue</title>
+</head>
+<body>
+
+    <script>
+//         Exercise 2
+// Write a function aboveFreezing that takes an array of numbers temps and returns an array with only temperatures that are above the freezing point of water. Temperature can be in Celsius or Fahrenheit, you decide.
+        
+// function aboveFreezing(temps) {
+//   const tempsAboveFreezing = temps.filter(function (temp) {
+//     return temp > 32;
+//   });
+
+//   return tempsAboveFreezing;
+// }
+// aboveFreezing([40, 67, 8, 29, 100, -3, 0]);
+
+// Exercise 3
+// Write a function removeRed that takes an array of objects foodArray with the format: [{ name: 'Apple', color: 'red' }, { name: 'Egg', color: 'white' }] and removes all red-colored foods from the array.
+ 
+function removeRed(foodArray) {
+  return foodArray.filter(function (food) {
+    return food.color !== 'red';
+  });
+}
+removeRed([{ name: 'Apple', color: 'red' }, { name: 'Egg', color: 'white' }]);
+ 
+ </script>
+    
+</body>
+</html>
