@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessValue</title>
+</head>
+<body>
+
+    <script>
+
+
+
+//         Exercise 1
+// There are 2 ways to access a value in an object:
+
+// let todo = {
+//             name: Apple,
+//             price: 3
+//             }
+
+//         todo.price;
+//         todo[price];
+
+//     // The second way allows you to use a variable to access the value
+//     let prop = 'price';
+//     todo[prop];   // prop will be replaced by its value so this is the
+//                 // same as todo['price']
+
+//     Write a function createCart that takes an object representing prices of food.
+// For example: createCart({ Apple: 3, Orange: 4, Egg: 2 });
+
+let total = 0;
+
+function createCart(foodPrices) {
+  const foods = Object.keys(foodPrices);
+
+  foods.forEach(function (food) {
+    const cartItem = document.createElement('div');
+
+    // Here we get the food price using the food variable.
+    // If food = 'Apple', then foodPrices[food] is the same
+    // as foodPrices['Apple'], which is the same as foodPrices.Apple
+    const foodPrice = foodPrices[food];
+    cartItem.innerText = food + ' $' + foodPrice;
+
+    const addButton = document.createElement('button');
+    addButton.innerText = 'Add';
+
+    addButton.onclick = function () {
+      total = total + foodPrice;
+    };
+
+    cartItem.appendChild(addButton);
+
+    // This wil render each food with an "Add" button onto the webpage.
+    document.body.appendChild(cartItem);
+  });
+}
+
+createCart({ Apple: 3, Orange: 4, Egg: 2 });
+    </script>
+</body>
+</html>
