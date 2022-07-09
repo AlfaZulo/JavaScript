@@ -12,18 +12,34 @@
 // Write a function named max that takes an array of numbers and returns the largest number in the array.
 // Example: max([1, 5, -2, 4, 3, 5, 0]); will return 5
 
-        function max (numArr) { 
-            let max = -Infinity;
+        // function max (numArr) { 
+        //     let max = -Infinity;
 
-            numArr.forEach(function(num){
-                if(num>max){
-                    max=num;
-                }
-            });
-            return max;
-         }
-        console.log(max([1, 5, -2, 4, 3, 5, 0]));
+        //     numArr.forEach(function(num){
+        //         if(num>max){
+        //             max=num;
+        //         }
+        //     });
+        //     return max;
+        //  }
+        // console.log(max([1, 5, -2, 4, 3, 5, 0]));
+//         Exercise 2
+// Write a function that returns the smallest number that’s greater or equal to 0
 
+
+    function smallest (minNonNegative){
+        let minNonNegative = Infinity;
+        
+        numArr.forEach(function(num){
+            if (num<0){
+                return;
+            }else if(num<min){
+                min =num
+            }
+        });
+        return min;
+    }
+    minNonNegative([1, 5, -2, 4, 3, 5, 0]);
 
 
     </script>
