@@ -43,7 +43,7 @@
         const datePicker = document.getElementById('date-picker');
         const dueDate = datePicker.value;
 
-        const id = new Date().getTime();
+        const id = '' + new Date().getTime();
         todos.push({title:title,
                     dueDate:dueDate,
                     id: id
