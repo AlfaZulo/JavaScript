@@ -17,7 +17,7 @@
 </body>
  
 <script>
- const todos = [{
+ let todos = [{
     title: 'Eat',
     dueDate: '2022-03-01',
     id:'id1'
@@ -53,13 +53,21 @@
 
     };
 
-    function deleteTodo(event){
+    function deleteTodo (event){
         const deleteButton = event.target;
-        const idTodelete = deleteButton.id    
-        todos.filter (function(todo){
-            
+        const idTodelete = deleteButton.id;
+
+        todos = todos.filter(function(todo){
+            if(todo.id=== idTodelete){
+                return false;
+            }else{
+                return true;
+            }
         })
-    };
+        return render();
+    }
+
+    
     
     function render(){ 
 
